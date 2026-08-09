@@ -6,7 +6,7 @@ dns.setServers(['8.8.8.8', '8.8.4.4'])
 
 async function connectDB() {
 
-    await mongoose.connect('mongodb+srv://yt:nCqQNCgi7nb4QmOw@yt-complete-backend.58vuhhi.mongodb.net/halley')
+    await mongoose.connect(process.env.MONGO_URI)
 
     console.log('Connected to DB')
 }
